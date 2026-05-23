@@ -45,7 +45,7 @@ init:
 	echo 'source .venv/bin/activate' > .envrc
 	direnv allow
 	pre-commit install --hook-type commit-msg
-	@echo "开发环境初始化完成"
+	@echo "开发环境初始化完成(需对照检查.env.example)"
 
 dev:
 	uv run uvicorn src.ssa.main:app --reload --host 0.0.0.0 --port 8000
