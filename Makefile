@@ -19,6 +19,7 @@ help:
 	@echo "  make init          初始化开发环境"
 	@echo "  make dev           启动开发服务器"
 	@echo "  make test          运行测试"
+	@echo "  make testv          运行测试(详细信息)"
 	@echo ""
 	@echo "提交规范:"
 	@echo "  make commit        交互式生成 Conventional Commits 提交"
@@ -51,6 +52,8 @@ dev:
 	uv run uvicorn src.ssa.main:app --reload --host 0.0.0.0 --port 8000
 
 test:
+	uv run pytest
+testv:
 	uv run pytest -v
 
 # ---------- Conventional Commits ----------

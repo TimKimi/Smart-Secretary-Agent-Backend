@@ -4,13 +4,13 @@ from fastapi import FastAPI
 
 from src.ssa.api.router import api_router
 from src.ssa.config import settings
+from src.ssa.db.session import init_db
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup
+    await init_db()
     yield
-    # Shutdown
 
 
 def create_app() -> FastAPI:

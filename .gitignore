@@ -11,3 +11,6 @@ wheels/
 
 # Sensitive var
 .env
+
+# Database
+*.db
