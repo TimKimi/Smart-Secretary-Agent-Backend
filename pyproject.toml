@@ -1,0 +1,20 @@
+[project]
+name = "ssa"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "commitizen>=4.16.2",
+    "cz-conventional-plus>=1.0.3",
+    "pre-commit>=4.6.0",
+]
+
+[tool.commitizen]
+name = "cz_conventional_plus"
+version = "0.1.0"
+version_files = ["pyproject.toml:version"]
+tag_format = "v$version"
